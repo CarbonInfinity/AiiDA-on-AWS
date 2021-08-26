@@ -1,0 +1,5 @@
+---
+username: ec2-user
+look_for_keys: true
+key_filename: "<Path to keys>"
+port: 22
