@@ -1,0 +1,9 @@
+---
+label: add
+description: Arithmetic Add
+input_plugin: arithmetic.add
+on_computer: true
+computer: hpc
+remote_abs_path: /bin/bash
+prepend_text: 'chmod +x aiida.in'
+append_text: ' '
