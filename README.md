@@ -3,7 +3,7 @@ In the following guide you will be introduced to setting up an HPC on AWS. We wi
 
 ## Sections
 [Licence](t/t)
-1. [Setting up an AWS HPC cluster](../1. Setting up an AWS HPC Cluster/1. Setting up an AWS HPC Cluster.md)
+1. [Setting up an AWS HPC cluster]("1. Setting up an AWS HPC Cluster/1. Setting up an AWS HPC Cluster.md")
 In this section you will create your first HPC cluster and configure it to allow AiiDA to connect to it.
 2. [Connecting AiiDA to the HPC](/2. Connecting AiiDA to the cluster/2. Connecting AiiDA to the cluster.md)
 3. [Installing software on the cluster](/3. Installing Software on the cluster/3. Installing Software on the cluster.md)
