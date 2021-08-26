@@ -1,0 +1,12 @@
+---
+label: hpc
+description: AWS HPC
+hostname: "<Master Public IP>"
+transport: ssh
+scheduler: slurm
+shebang: "#!/bin/bash"
+work_dir: /home/ec2-user/aiida
+mpirun_command: "mpirun -np {tot_num_mpiprocs}"
+mpiprocs_per_machine: 8
+prepend_text: ""
+append_text: ""
