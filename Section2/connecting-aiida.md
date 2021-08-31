@@ -2,7 +2,7 @@
 There are many options as to how AiiDA can be run. In the following we will run AiiDA from our cloud9 instance using a docker container. You could just as well install AiiDA natively in the same VM (e.g. using [this](https://galaxy.ansible.com/marvel-nccr/aiida) ansible) or run from your local machine.
 
 ## 2.1. Downloading and configuring the AiiDA container
-Before we start connecting AiiDA with our HPC we need to setup and configure the container from which we will be running AiiDA. Depending on your configuration, your volume may be too small to download the container. See [troubleshooting](../troubleshooting/troubleshooting.md) to resolve this.
+Before we start connecting AiiDA with our HPC we need to setup and configure the container from which we will be running AiiDA. Depending on your configuration, your volume may be too small to download the container. See [troubleshooting](../Troubleshooting/Troubleshooting.md) to resolve this.
 
 To start:
 1. Pull the docker container: `docker pull aiidateam/aiida-core:latest`  
