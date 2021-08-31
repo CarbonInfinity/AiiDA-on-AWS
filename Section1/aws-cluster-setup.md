@@ -3,14 +3,14 @@
 In this section you will get started with working on AWS, set up your first HPC cluster and then configure it to make it suitable for AiiDA.
 
 ## 1.1. Creating the cluster
-To get started follow the following tutorial on how to setup an [HPC cluster](https://www.hpcworkshops.com/03-hpc-aws-parallelcluster-workshop.html) until section 3h. Note: Do not delete the cluster as shown in 3i. We still need it :)
+To get started follow the following tutorial on how to setup an [AWS Parallelcluster](https://www.hpcworkshops.com/03-hpc-aws-parallelcluster-workshop.html) until section 3h. Note: Do not delete the cluster as shown in 3i. We still need it :)
 
 If you already have an AWS HPC cluster and want to get started using it with AiiDA feel free to skip the above.
 
 ## 1.2. Configuring the cluster
 Already back with more of an idea of how to create an HPC?
 
-Now we will configure the cluster. Before we start ensure that you are in a terminal in your cloud9 instance.
+Now we will configure the cluster. Please open a terminal in your cloud9 instance.
 
 To get an idea of how our cluster is doing run:
 ```
@@ -25,12 +25,14 @@ ClusterUser: ec2-user
 MasterPrivateIP: 172.31.82.247
 ComputeFleetStatus: RUNNING
 ```
-Particularly note the master public ip. We will need it later so either make a note or export it. Note the ClusterUser as well. The default is `ec2-user`.
+Particularly note down 
+ * the master public ip
+ * the ClusterUser (the default is `ec2-user`)
 
 AiiDA connects to an HPC through ssh. In the standard configuration our HPC cluster does not allow connecting to the head node using normal ssh (e.g. `ssh ec2-user@<Master Public ip> -i <path to key>`). 
 
 To change this:
-1. SSH into the head node: `pcluster ssh <cluster name> -i <path to key>`
+1. From the cloud9 terminal, log into the head node using the pcluster tool: `pcluster ssh <cluster name> -i <path to key>`
 2. Open sshd_config with: `sudo nano /etc/ssh/sshd_config`
 3. Ensure that `ChallengeResponseAuthentication` is set to `no` and `PasswordAuthentication` is set to `yes`
 4. Restart the ssh service: `sudo systemctl restart sshd`
@@ -42,6 +44,6 @@ ssh ec2-user@<Master public ip> -i <path to key>
 ```
 This time you should be able to enter the head node.
 
-If so Congratulations! Your HPC cluster is now configured and you are ready to connect AiiDA to it.
+If so, congratulations! Your HPC cluster is now configured and you are ready to connect AiiDA to it.
 
-Move on to the next [section](../Section2/2.%20Connecting%20AiiDA%20to%20the%20cluster.md).
+Move on to the next [section](../Section2/connecting-aiida.md).
