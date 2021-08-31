@@ -49,12 +49,10 @@ AiiDA also requires a key to connect to the cluster. However with the current pe
 4. Edit `computer-config.yaml` to reflect the correct path to the key with open permissions
 5. Configure the the computer: `verdi computer configure ssh hpc --config computer-setup.yaml`
 6. Choose the default (hit enter) for all other options
-7. Run: `verdi computer list`
+7. Run: `verdi computer list`. You should now see `hpc` in your computer list.
+8. 7. Run: `verdi computer test`
 
-You should now see `hpc` in your computer list.
-
-If so, Congratulations!
-
+If the tests pass - congratulations! 
 You have now setup and configured AiiDA to interface with the HPC. Next up is running a job on the HPC through AiiDA.
 
 ## 2.4 Running a job through AiiDA on the HPC
