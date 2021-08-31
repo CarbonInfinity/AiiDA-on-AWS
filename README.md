@@ -3,7 +3,7 @@ This guide introduces you to setting up a high-performance compute cluster on [A
 
 ## Sections
 1,3 are broken to be fixed.
-1. [Setting up a HPC cluster on AWS:](Section1/aws-cluster-setup.md")
+1. [Setting up a HPC cluster on AWS:](Section1/aws-cluster-setup.md)
 Create your first HPC cluster and configure it to allow AiiDA to connect to it.
 2. [Connecting AiiDA to the HPC:](Section2/connecting-aiida.md) connect to the cluster from an AiiDA docker container and run a first calculation. 
 3. [Installing software on the cluster](Section3/installing-software.md) and running more advanced calculations
