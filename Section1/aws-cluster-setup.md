@@ -3,9 +3,9 @@
 In this section you will get started with working on AWS, set up your first HPC cluster and then configure it to make it suitable for AiiDA.
 
 ## 1.1. Creating the cluster
-To get started follow the following tutorial on how to setup an [AWS Parallelcluster](https://www.hpcworkshops.com/03-hpc-aws-parallelcluster-workshop.html) until section 3h. Note: Do not delete the cluster as shown in 3i. We still need it :)
+To get started follow the following tutorial on how to setup an [AWS Parallelcluster](https://www.hpcworkshops.com/03-hpc-aws-parallelcluster-workshop.html) until section 3h. Note: Do not delete the cluster as shown in 3i. We still need it :) This tutorial gives an example config file containing the parameters needed to set up a HPC cluster, for further functionality refer to Section 4 ([Advanced HPC clusters](https://github.com/CarbonInfinity/AiiDA-on-AWS/blob/main/Section4/advanced-clusters.md)). 
 
-If you already have an AWS HPC cluster and want to get started using it with AiiDA feel free to skip the above.
+If you already have an AWS HPC cluster and want to get started using it with AiiDA feel free to skip the above. You should now have a HPC cluster (deployed and managed using AWS Parallel Cluster) running within a Cloud9 enivronment on AWS. 
 
 ## 1.2. Configuring the cluster
 Already back with more of an idea of how to create an HPC?
