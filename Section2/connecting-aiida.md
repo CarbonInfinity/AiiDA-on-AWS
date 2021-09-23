@@ -60,4 +60,8 @@ To run code on our HPC we first need to setup a code for doing so. In this secti
 
 1. To setup the code run: `verdi code setup --config add.yaml`
 2. Verify that the code has been added: `verdi code list`
-3. Run 
+3. We are now going to run test.py, which will simply add two numbers together. To execute the script run: `verdi run test.py --add_code add@hpc`
+
+You should now see how 0, 1, and 2 are added together. If so you have successfully run your first AiiDA script on the HPC.
+
+You can now move on to the [next section](../Section3/installing-software.md) where we will be covering the installation of proper simulation codes.
