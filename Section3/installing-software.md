@@ -29,4 +29,10 @@ More information about configuring ebs volumes can be found [here](https://docs.
 
 ## Installing software
 
-For install
+Installing software on the head node is very similar to installing software on your local computer with two caveats: 
+1. You will have to ensure that the software is installed in the shared directory.
+2. In light of the cost of running a HPC, small performance increases of the code become significant. As such we will compile the codes specifically for the processor type of our EC2 instances.
+
+In the following we will examplary install RASPA 2.0. The same steps are appicable to most simulations codes.
+
+### Installing RASPA
