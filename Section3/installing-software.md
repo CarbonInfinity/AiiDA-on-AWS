@@ -43,4 +43,6 @@ CFLAGS="-march=cascadelake -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 ```
 
-The above flags specify the processor type to the C compiler. AWS C5 and C5d instances both run cascade lake processors. C4 instances on the other hand run haswell processors. We recommend that you verify the processor type before you 
+The above flags specify the processor type to the C compiler. AWS C5 and C5d instances both run cascade lake processors. C4 instances on the other hand run haswell processors. We recommend that you verify the processor type of the instance you are using before you compile the software.
+
+
