@@ -16,13 +16,13 @@ volume_size = 100
 
 As an example the above snippet defines an ebs volume called ebs1. An explanation of the most useful keywords can be found below. Of these only `shared_dir` is required.
 
-- `shared_dir` can be used to specify the path where the volume is mounted on both the head and compute nodes.
-- `volume_size` defines the size of the volume in gigabytes. In example above the volume would have 100 GB. The default size is 20 GB.
-- `ebs_volume_id` can be used to mount an already existing ebs volume. 
-- `ebs_snapshot_id` similarly to `ebs_volume_id` this keyword can be used to mount an existing snapshot of an ebs volume.
-- `volume_type` allows the user to choose a specific volume type. Available are:  
-  - `gp2, gp3` general purpose SSDs
-  - `io1, io2` provisioned IOPS SSDs
+- `shared_dir` Can be used to specify the path where the volume is mounted on both the head and compute nodes.
+- `volume_size` Defines the size of the volume in gigabytes. In example above the volume would have 100 GB. The default size is 20 GB.
+- `ebs_volume_id` Can be used to mount an already existing ebs volume. 
+- `ebs_snapshot_id` Cimilarly to `ebs_volume_id` this keyword can be used to mount an existing snapshot of an ebs volume.
+- `volume_type` Allows the user to choose a specific volume type. Available are:  
+  - `gp2, gp3` General purpose SSDs
+  - `io1, io2` Provisioned IOPS SSDs
   - `st1` Throughput optimized HDD
 
 More information about configuring ebs volumes can be found [here](https://docs.aws.amazon.com/parallelcluster/latest/ug/ebs-section.html). Similarly the filesystem that is used by the head node can also be [configured](https://docs.aws.amazon.com/parallelcluster/latest/ug/efs-section.html). 
