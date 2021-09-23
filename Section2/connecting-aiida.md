@@ -16,7 +16,7 @@ Before we start connecting AiiDA with our HPC we need to setup and configure the
 To start:
 1. Pull the docker container: `docker pull aiidateam/aiida-core:latest`  
 2. Create a volume to associate with the container: `docker volume create aiida-data`
-3. Launch to container: `docker run -d --name aiida-container --mount source=aiida-data,target=/tmp/data aiidateam/aiida-core:latest`
+3. Launch to container: `docker run -d --name aiida-container --mount source=aiida-data,target=/home/aiida aiidateam/aiida-core:latest`
 4. Enter into the container: `docker exec -it --user aiida aiida-container /bin/bash`
 
 We have now a container running AiiDA. To verify that everything works as it should you can run `verdi status` (it takes about a minute for everything to boot). The aiida user currently has very few privileges making file handling challenging. 
@@ -25,7 +25,7 @@ To change this:
 1. Exit the container
 2. Reenter as root: `docker exec -it --user root aiida-container /bin/bash`
 3. Change the root password: `passwd`
-4. Give the AiiDA user ownership to `/tmp` (or the directory where your volume is located): `chown -R aiida /tmp`
+4. Give the AiiDA user ownership to `/home` (or the directory where your volume is located): `chown -R aiida /home`
 5. Exit and reenter as aiida
 6. Verify everything still works: `verdi status`
 
