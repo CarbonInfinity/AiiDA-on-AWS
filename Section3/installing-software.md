@@ -28,3 +28,5 @@ As an example the above snippet defines an ebs volume called ebs1. An explanatio
 More information about configuring ebs volumes can be found [here](https://docs.aws.amazon.com/parallelcluster/latest/ug/ebs-section.html). Similarly the filesystem that is used by the head node can also be [configured](https://docs.aws.amazon.com/parallelcluster/latest/ug/efs-section.html). 
 
 ## Installing software
+
+For install
