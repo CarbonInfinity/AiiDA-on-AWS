@@ -36,3 +36,11 @@ Installing software on the head node is very similar to installing software on y
 In the following we will examplary install RASPA 2.0. The same steps are appicable to most simulations codes.
 
 ### Installing RASPA
+Open the provided `install_raspa` script. 
+
+```
+CFLAGS="-march=cascadelake -O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+```
+
+The above flags specify the processor type to the C compiler. AWS C5 and C5d instances both run cascade lake processors. C4 instances on the other hand run haswell processors. We recommend that you verify the processor type before you 
