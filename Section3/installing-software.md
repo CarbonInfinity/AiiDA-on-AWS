@@ -51,10 +51,10 @@ autoconf
 The above section downloads, extracts and prepares the installation of RASPA.
 
 ```
-./configure CFLAGS="-march=cascadelake -O2 -pipe" CXXFLAGS="-march=cascadelake -O2 -pipe" --prefix=${PREFIX}
+./configure CFLAGS="-march=skylake -O2 -pipe" CXXFLAGS="-march=skylake -O2 -pipe" --prefix=${PREFIX}
 ```
 
-Using `./configure` we can add flags for the C compiler such that we compile for a specific processor type. In this case `cascadelake`. Next we finish the installation:
+Using `./configure` we can add flags for the C compiler such that we compile for a specific processor type. In this case `skylake`. Next we finish the installation:
 
 ```
 make
