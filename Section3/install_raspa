@@ -1,0 +1,18 @@
+#!/bin/bash
+wget https://github.com/iRASPA/RASPA2/archive/v2.0.45.tar.gz
+tar -xvf v2.0.45.tar.gz
+cd RASPA2-2.0.45
+mkdir m4
+aclocal
+autoreconf -i
+automake --add-missing
+autoconf
+
+./configure CFLAGS="-march=skylake -O2 -pipe" CXXFLAGS="-march=skylake -O2 -pipe" --prefix=${PREFIX}
+
+make
+sudo make install 
+sudo ldconfig
+
+mkdir /shared/Raspa
+cp /bin/simulate /shared/Raspa/

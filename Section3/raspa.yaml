@@ -1,0 +1,9 @@
+---
+label: raspa
+description: Raspa
+input_plugin: raspa
+on_computer: true
+computer: hpc
+remote_abs_path: /shared/Raspa/simulate
+prepend_text: ' '
+append_text: ' '

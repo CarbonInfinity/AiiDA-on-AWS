@@ -1,0 +1,9 @@
+---
+label: zeopp
+description: Zeo++
+input_plugin: zeopp.network
+on_computer: true
+computer: hpc
+remote_abs_path: /home/ec2-user/.local/bin/network
+prepend_text: ' '
+append_text: ' '

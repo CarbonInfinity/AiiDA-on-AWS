@@ -1,0 +1,29 @@
+#!/bin/bash
+
+CFLAGS="-march=skylake -O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+
+wget https://github.com/lsmo-epfl/zeopp-lsmo/archive/v0.4.2.tar.gz
+tar -xvf v0.4.2.tar.gz
+
+git clone https://github.com/eigenteam/eigen-git-mirror.git
+cp -r /home/ec2-user/environment/Zeopp/eigen-git-mirror/Eigen ~/environment/Zeopp/zeopp-lsmo-0.4.2/zeo++
+
+cd zeopp-lsmo-0.4.2
+mkdir -p ${PREFIX}/bin
+
+cd voro++
+make CFLAGS="-march=skylake -O2 -pipe" CXXFLAGS="-march=skylake -O2 -pipe"
+cp src/voro++ ${PREFIX}/bin/
+cd ../
+
+cd zeo++
+make CFLAGS="-I$PREFIX/include/eigen3 -march=skylake -O2 -pipe" CXXFLAGS="-march=skylake -O2 -pipe"
+sudo cp network ${PREFIX}/bin/
+
+mkdir /shared/zeopp
+sudo cp network /shared/zeopp
+
+cd ../
+
+
