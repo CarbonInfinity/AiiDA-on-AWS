@@ -70,4 +70,9 @@ cp /bin/simulate /shared/Raspa/simulate
 ```
 
 Now let's actuallly install RASPA. Login into the head node, add executive permissions to the script (`chmod +x <file name>`) and execute it (`./<file name>`). 
-If everything goes well, you will now have installed RASPA. A similar script for Zeo++ is provided as well and using the above as a template you can create one for your simulation codes. Now move on to [section 4](../Section4/advanced-clusters.md).
+If everything goes well, you will now have installed RASPA. A similar script for Zeo++ is provided as well and using the above as a template you can create one for your simulation codes. 
+
+### Linking the code to AiiDA
+What's still left to do is telling AiiDA where it can find the executable. This is done through code objects. You can see a list of the present codes by running `verdi code list`. An AiiDA code object contains information about where the executable is stored and how it should be executed. To create a code object you can either run `verdi code setup` or utilise a yaml file. We have provided yaml files for both RASPA and Zeo++. You can create a code using these with: `verdi code setup -c raspa.yaml`.
+
+Now move on to [section 4](../Section4/advanced-clusters.md).
