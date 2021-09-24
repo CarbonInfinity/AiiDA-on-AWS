@@ -70,4 +70,4 @@ cp /bin/simulate /shared/Raspa/simulate
 ```
 
 Now let's actuallly install RASPA. Login into the head node, add executive permissions to the script (`chmod +x <file name>`) and execute it (`./<file name>`). 
-If everything goes well, you will now have installed RASPA. A similar script for Zeo++ is provided as well and using the above as a template you can create one for your simulation codes. Now move on to [section 4](../Section4/advanced-cluster.md).
+If everything goes well, you will now have installed RASPA. A similar script for Zeo++ is provided as well and using the above as a template you can create one for your simulation codes. Now move on to [section 4](../Section4/advanced-clusters.md).
