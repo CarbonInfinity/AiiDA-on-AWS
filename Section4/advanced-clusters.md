@@ -40,12 +40,12 @@ Further useful information on AWS ParallelCluster can be found [here](https://ji
 
 ## Extend the aiida-core dockerfile
 
-The aiida-core dockerfile may be extended to include one's own modifications.
+The aiida-core dockerfile may be extended to include one's own modifications. In the following we are going to first save our modified container and then push it to dockerhub. For the last step create a account on dockerhub and then a repository. Now login to dockerhub from the terminal using `docker login`. 
 
-After following step 2.1.1. `Pull the docker container: docker pull aiidateam/aiida-core:latest`
+After following step 2.1.1. *Pull the docker container: `docker pull aiidateam/aiida-core:latest`*, you can mount a volume and enter the container as discussed before. To save the changes you have made follow these steps:
+- Find the id of the docker container you want to save: `docker ps -a`
+- Commit the container to an image: `docker commit <id of container> <dockerhub login>/<repo name>:<version e.g. latest>`
+- Now we have saved the stage of our container to an image. To verify list all images: `docker image ls`
+- If you're image show's up in the list we can now push to dockerhub: `docker push <dockerhub login>/<repo name>:<version e.g. latest>`
 
-You can run a shell in the image with: `docker run -t -i --entrypoint bash aiidateam/aiida-core:latest`
-
-Then change the configuration files as you like. Note the container ID (it appears in the prompt, e.g. root@9ffa2bafe2bb:/#), then commit it to a new image: `docker commit 9ffa2bafe2bb aiida-core:newupdate`
-
-
+Docker will upload the image to dockerhub and you can download it from there to any computer running docker.
