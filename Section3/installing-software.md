@@ -45,4 +45,18 @@ CXXFLAGS="${CFLAGS}"
 
 The above flags specify the processor type to the C compiler. AWS C5 and C5d instances both run cascade lake processors. C4 instances on the other hand run haswell processors. We recommend that you verify the processor type of the instance you are using before you compile the software.
 
-
+```
+wget https://github.com/iRASPA/RASPA2/archive/v2.0.45.tar.gz
+tar -xvf v2.0.45.tar.gz
+cd RASPA2-2.0.45
+mkdir m4
+aclocal
+autoreconf -i
+automake --add-missing
+autoconf
+./configure --prefix=${PREFIX}
+make CFLAGS = CFLAGS
+sudo make install 
+sudo ldconfig
+```
+This next part is the main installation. It downloads the code, configures and installs it. However, if we install it like this the executable ends up in `/bin` and not in a shared directory. To rectify this simply copy 
