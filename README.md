@@ -6,7 +6,7 @@ Note: This guide has not yet been updated to aws-parralelcluster 3.0. Please use
 1. [Setting up a HPC cluster on AWS:](Section1/aws-cluster-setup.md)
 Create your first HPC cluster and configure it to allow AiiDA to connect to it.
 2. [Connecting AiiDA to the HPC:](Section2/connecting-aiida.md) connect to the cluster from an AiiDA docker container and run a first calculation. 
-3. [Installing software on the cluster](Section3/installing-software.md) and running more advanced calculations
+3. [Installing software on the cluster](Section3/installing-software.md)
 4. [Advanced HPC clusters:](Section4/advanced-clusters.md) spot instances and how to add to the AiiDA docker container.
 
 5. [Troubleshooting](Troubleshooting/Troubleshooting.md)
