@@ -41,7 +41,7 @@ We will now connect from the container to the HPC cluster using ssh. In this sec
 Now we can connect to our HPC cluster from the terminal. The next step is to connect AiiDA to the cluster.
 
 ## 2.3 Connecting AiiDA to the HPC 
-AiiDA also requires a key to connect to the cluster. However with the current permissions AiiDA can't access our key and if we change the permissions such that AiiDA can access the key we can't use ssh anymore to connect to our cluster due to the permissions being to open. Thus I advice to create a copy of the key and change it's permissions to e.g. `666` and use this key in the following section.
+Next we will setup an AiiDA computer instance in our container to allow connecting to the HPC.
 
 1. Clone the three files (`computer-setup.yaml`, `computer-config.yaml` and `add.yaml`) in the folder associated with this section into `/home/aiida/setup/`
 2. Add your Master public ip to `computer-setup.yaml`
